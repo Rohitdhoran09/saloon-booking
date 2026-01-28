@@ -1,69 +1,37 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
+import { getCurrentUser } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 
-export default function AdminDashboard() {
-  const [bookings, setBookings] = useState([]);
+export default function AdminPage() {
   const router = useRouter();
+  const adminEmail = "admin@glowsalon.com";
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    checkAuth();
+    const checkAdmin = async () => {
+      const user = await getCurrentUser();
+      if (!user || user.email !== adminEmail) {
+        router.push("/");
+      } else {
+        setLoading(false);
+      }
+    };
+    checkAdmin();
   }, []);
 
-  const checkAuth = async () => {
-    const { data } = await supabase.auth.getUser();
-
-    if (!data?.user || data.user.email !== "admin@glowsalon.com") {
-      router.push("/admin/login");
-      return;
-    }
-
-    fetchBookings();
-  };
-
-  const fetchBookings = async () => {
-    const { data } = await supabase
-      .from("bookings")
-      .select("*")
-      .order("date", { ascending: true });
-
-    setBookings(data || []);
-  };
+  if (loading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        Checking permissions...
+      </div>
+    );
 
   return (
-    <div className="min-h-screen bg-voilet-800 p-8">
-      <h1 className="text-3xl font-bold mb-6">
-        Admin Dashboard
-      </h1>
-
-      <div className="bg-white rounded-xl shadow overflow-x-auto">
-        <table className="w-full">
-          <thead className="bg-blue-100">
-            <tr>
-              <th className="p-3">Name</th>
-              <th className="p-3">Service</th>
-              <th className="p-3">Date</th>
-              <th className="p-3">Time</th>
-              <th className="p-3">Phone</th>
-              <th className="p-3">Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bookings.map((b) => (
-              <tr key={b.id} className="border-t">
-                <td className="p-3">{b.name}</td>
-                <td className="p-3">{b.service}</td>
-                <td className="p-3">{b.date}</td>
-                <td className="p-3">{b.time}</td>
-                <td className="p-3">{b.phone}</td>
-                <td className="p-3">{b.email}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold mb-4">Admin Dashboard</h1>
+      <p>Only admins can see this page.</p>
     </div>
   );
 }
