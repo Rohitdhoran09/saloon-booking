@@ -38,13 +38,32 @@ function BookingForm() {
     setLoading(true);
     setMessage("");
 
-    const { error } = await supabase.from("bookings").insert([form]);
+    // --- STEP 1: Get the current logged-in user ---
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+
+    if (userError || !user) {
+      setMessage("❌ You must be logged in to book an appointment.");
+      setLoading(false);
+      return;
+    }
+
+    // --- STEP 2: Add user_id to the form data ---
+    const bookingData = {
+      ...form,
+      user_id: user.id, // This links the booking to the logged-in user
+    };
+
+    // --- STEP 3: Insert into Supabase ---
+    const { error } = await supabase.from("bookings").insert([bookingData]);
 
     if (error) {
+      console.error("Database Error:", error.message);
       setMessage("❌ Booking failed: " + error.message);
     } else {
       setMessage(`✅ ${selectedService} booked successfully!`);
       setForm({ name: "", email: "", phone: "", service: selectedService, date: "", time: "" });
+      
+      // Redirect to home or "My Bookings" after success
       setTimeout(() => router.push("/"), 2000);
     }
     setLoading(false);
@@ -72,7 +91,6 @@ function BookingForm() {
           <h1 className="text-xl font-serif font-bold text-pink-600 tracking-tight uppercase">
             GLOWSALON RESERVATION
           </h1>
-          {/* Displaying the specific treatment name here instead of a dropdown */}
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-900 leading-tight">
             {selectedService}
           </h2>
@@ -167,7 +185,6 @@ function BookingForm() {
   );
 }
 
-// Next.js requirement: Wrap components using useSearchParams in Suspense
 export default function BookingPage() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-pink-600">Loading Form...</div>}>
