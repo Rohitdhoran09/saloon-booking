@@ -209,7 +209,7 @@ export default function ServicesPage() {
                 </p>
                 <Link 
                   href={`/booking?service=${encodeURIComponent(service.title)}`}
-                  className="block text-center w-full py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-pink-600 transition-all duration-300 shadow-lg active:scale-95"
+                  className="block text-center w-full py-4 bg-pink-900 text-white font-bold rounded-2xl hover:bg-pink-600 transition-all duration-300 shadow-lg active:scale-95"
                 >
                   Book Appointment
                 </Link>
