@@ -105,7 +105,7 @@ function BookingForm() {
               value={form.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none bg-pink-50/30 transition-all"
+              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none text-gray-700 bg-pink-50/30 transition-all"
               required
             />
           </div>
@@ -119,7 +119,7 @@ function BookingForm() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none bg-pink-50/30 transition-all"
+                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none text-gray-700 bg-pink-50/30 transition-all"
                 required
               />
             </div>
@@ -130,7 +130,7 @@ function BookingForm() {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="Phone"
-                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none bg-pink-50/30 transition-all"
+                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none text-gray-700 bg-pink-50/30 transition-all"
                 required
               />
             </div>
@@ -144,7 +144,7 @@ function BookingForm() {
                 type="date"
                 value={form.date}
                 onChange={handleChange}
-                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none bg-pink-50/30 transition-all"
+                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none text-gray-700 bg-pink-50/30 transition-all"
                 required
               />
             </div>
@@ -155,7 +155,7 @@ function BookingForm() {
                 type="time"
                 value={form.time}
                 onChange={handleChange}
-                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none bg-pink-50/30 transition-all"
+                className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 outline-none text-gray-700 bg-pink-50/30 transition-all"
                 required
               />
             </div>
@@ -165,7 +165,7 @@ function BookingForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-pink-600 text-white py-4 rounded-2xl font-bold mt-10 hover:bg-pink-700 hover:shadow-lg transition-all transform active:scale-[0.98] disabled:bg-gray-300"
+          className="w-full bg-pink-600 text-white py-4 rounded-2xl font-bold mt-10 hover:bg-pink-700 hover:shadow-lg transition-all transform active:scale-[0.98]  disabled:bg-gray-300"
         >
           {loading ? "Processing..." : `Confirm ${selectedService}`}
         </button>

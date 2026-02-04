@@ -13,7 +13,7 @@ const allServices = [
     id: 1,
     title: "Signature Facial", 
     description: "A customized facial treatment to cleanse, exfoliate, and hydrate your skin for a healthy glow.", 
-    price: "$95",
+    price: "Rs.499",
     duration: "60 min",
     image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" 
   },
@@ -21,15 +21,15 @@ const allServices = [
     id: 2,
     title: "Deep Tissue Massage", 
     description: "Therapeutic massage targeting deep muscle layers to release chronic tension and stress.", 
-    price: "$160",
+    price: "Rs.799",
     duration: "90 min",
-    image: "https://images.unsplash.com/photo-1544161515-450ce4189605?q=80&w=2070&auto=format&fit=crop" 
+    image: "https://tse2.mm.bing.net/th/id/OIP.DWmY5ECei_o8SfmuyrlLaAHaEK?pid=Api&P=0&h=180" 
   },
   { 
     id: 3,
     title: "Luxury Hair Spa", 
     description: "Deep conditioning treatment and scalp massage to restore shine and health to your hair.", 
-    price: "$120",
+    price: "Rs.699",
     duration: "75 min",
     image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2070&auto=format&fit=crop" 
   },
@@ -37,23 +37,23 @@ const allServices = [
     id: 4,
     title: "Classic Manicure", 
     description: "Expert nail shaping, cuticle care, and a flawless polish application for elegant hands.", 
-    price: "$45",
+    price: "Rs.299",
     duration: "45 min",
-    image: "https://images.unsplash.com/photo-1632345031435-81979cd75a3e?q=80&w=2070&auto=format&fit=crop" 
+    image: "https://tse2.mm.bing.net/th/id/OIP.eMFMTqPzdFWQPFzx4_XYowHaEK?pid=Api&P=0&h=180" 
   },
   { 
     id: 5,
     title: "Balayage Coloring", 
     description: "Hand-painted highlights for a natural, sun-kissed look tailored to your hair type.", 
-    price: "$210+",
+    price: "Rs.2999",
     duration: "180 min",
-    image: "https://images.unsplash.com/photo-1560869713-7d0a294308ed?q=80&w=2070&auto=format&fit=crop" 
+    image: "https://tse3.mm.bing.net/th/id/OIP.m2kFAo_l9S-n6-kY-fWLPgHaJc?pid=Api&P=0&h=180" 
   },
   { 
     id: 6,
     title: "Aromatherapy Package", 
     description: "A combination of essential oil massage and facial for ultimate mind-body relaxation.", 
-    price: "$250",
+    price: "Rs.1499",
     duration: "120 min",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" 
   },

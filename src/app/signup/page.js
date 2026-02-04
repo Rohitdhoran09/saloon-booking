@@ -61,7 +61,7 @@ export default function SignupPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 focus:outline-none bg-pink-50/50 transition-all placeholder:text-gray-400"
+              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 focus:outline-none text-gray-700 bg-pink-50/50 transition-all placeholder:text-gray-400"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -73,7 +73,7 @@ export default function SignupPage() {
             <input
               type="password"
               placeholder="Create a password"
-              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 focus:outline-none bg-pink-50/50 transition-all placeholder:text-gray-400"
+              className="w-full p-4 border border-pink-100 rounded-2xl focus:ring-2 focus:ring-pink-600 focus:outline-none text-gray-700 bg-pink-50/50 transition-all placeholder:text-gray-400"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
