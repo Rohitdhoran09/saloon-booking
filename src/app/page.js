@@ -27,10 +27,10 @@ const slides = [
 
 const services = [
   { title: "Facial Treatments", description: "Glow your skin with our rejuvenating facial therapies.", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Body Massage", description: "Relax and relieve tension with professional massages.", image: "https://images.unsplash.com/photo-1544161515-450ce4189605?q=80&w=2070&auto=format&fit=crop" },
+  { title: "Body Massage", description: "Relax and relieve tension with professional massages.", image: "https://tse2.mm.bing.net/th/id/OIP.DWmY5ECei_o8SfmuyrlLaAHaEK?pid=Api&P=0&h=180" },
   { title: "Hair & Spa", description: "Luxury hair care and spa treatments for ultimate pampering.", image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Manicure & Pedicure", description: "Pamper your hands and feet with our expert care.", image: "https://images.unsplash.com/photo-1632345031435-81979cd75a3e?q=80&w=2070&auto=format&fit=crop" },
-  { title: "Hair Coloring", description: "Professional coloring to refresh your look.", image: "https://images.unsplash.com/photo-1560869713-7d0a294308ed?q=80&w=2070&auto=format&fit=crop" },
+  { title: "Manicure & Pedicure", description: "Pamper your hands and feet with our expert care.", image: "https://tse2.mm.bing.net/th/id/OIP.eMFMTqPzdFWQPFzx4_XYowHaEK?pid=Api&P=0&h=180" },
+  { title: "Hair Coloring", description: "Professional coloring to refresh your look.", image: "https://tse3.mm.bing.net/th/id/OIP.m2kFAo_l9S-n6-kY-fWLPgHaJc?pid=Api&P=0&h=180" },
   { title: "Special Packages", description: "Customizable combo packages for ultimate relaxation.", image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" },
 ];
 
