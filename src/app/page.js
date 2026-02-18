@@ -16,7 +16,7 @@ const slides = [
   {
     title: "50% Off on First Visit",
     description: "New customers enjoy 50% off on any spa or salon service. Book now and indulge in luxury.",
-    image: "https://images.unsplash.com/photo-1544161515-450ce4189605?auto=format&fit=crop&q=80&w=2070",
+    image: "https://wallpapers.com/images/hd/hair-salon-background-ocd8o0oatvbqyg39.jpg",
   },
   {
     title: "Premium Massage",
