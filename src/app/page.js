@@ -328,9 +328,9 @@ export default function HomePage() {
             <div>
               <h5 className="text-lg font-bold mb-6">Contact Us</h5>
               <ul className="space-y-4 text-gray-400 text-sm font-light">
-                <li className="flex gap-3">📍 123 Wellness Ave, City Tower, NY</li>
-                <li className="flex gap-3">📞 +1 (555) 123-4567</li>
-                <li className="flex gap-3">✉️ hello@glowsalon.com</li>
+                <li className="flex gap-3">📍 123 Wellness Ave, Ganesh Nagar, pune</li>
+                <li className="flex gap-3">📞 8766508715</li>
+                <li className="flex gap-3">✉️ official@glowsalon.com</li>
               </ul>
             </div>
             <div>
